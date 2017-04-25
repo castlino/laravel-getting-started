@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome', ['links' => $links]);
 });
 
+
+Route::get('/list/index', 'ListController@index');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
