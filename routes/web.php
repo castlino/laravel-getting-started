@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    $links = \App\Link::all();
+    return view('welcome', ['links' => $links]);
 });
 
 Auth::routes();
