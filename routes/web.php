@@ -47,3 +47,6 @@ Route::post('/submit', function(Request $request) {
     $link->save();
     return redirect('/');
 });
+
+Route::get('/list/create', 'ListController@create');
+Route::post('/list/create', 'ListController@create');
